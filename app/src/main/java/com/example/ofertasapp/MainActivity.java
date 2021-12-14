@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         //según la card pulsada abriremos una actividad u otra
         switch (view.getId()){
+            case R.id.imageView3:  //al pulsar el icono de la flecha volvemos a la pantalla principal
+                finish();
+                break;
             case R.id.cardOfertas:
                 Intent i = new Intent(getApplicationContext(), Ofertas_Activity.class);
                 //mandamos el perfil y el id del usuario a la actividad de ofertas

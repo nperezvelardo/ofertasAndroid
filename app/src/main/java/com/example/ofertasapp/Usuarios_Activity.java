@@ -73,6 +73,9 @@ public class Usuarios_Activity extends AppCompatActivity {
     public void onClick(View view) {
         //según la card pulsada abriremos una actividad u otra
         switch (view.getId()){
+            case R.id.btnIcoAtras:  //al pulsar el icono de la flecha volvemos a la pantalla principal
+                finish();
+                break;
             case R.id.cardListado:
                 Intent i = new Intent(getApplicationContext(), Users_Activity.class);
                 i.putExtra("id", user.getId());

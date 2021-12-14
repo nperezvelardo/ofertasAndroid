@@ -77,7 +77,7 @@ public class Users_Activity extends AppCompatActivity {
                             JSONObject obj = new JSONObject(response);  //nos traemos la respuesta
                             JSONArray userArray = obj.getJSONArray("detalles");  //recogemos el array detalles de la respuesta
 
-                            //recorremos el array. Obtenemos un mensaje en cada iteración
+                            //recorremos el array. Obtenemos un usuario en cada iteración
                             for (int i = 0; i < userArray.length(); i++) {
                                 JSONObject userObject = userArray.getJSONObject(i);
                                 Usuario user = new Usuario(userObject.getInt("id"), userObject.getString("nombre"), userObject.getString("apellido1"), userObject.getString("email"), userObject.getString("password"), userObject.getInt("activo"));
